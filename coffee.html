@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" href="coffee.css">
+</head>
+<body class="body">
+    <div class="main">
+        <img class="coffee" src="coffee-img/coffee2.png" />
+        <p class="app">My Coffee App</p>
+        <div class="main2">
+            <button class="order" onclick="add()">&#43;</button>
+            <p class="num" id="num">1</p>
+            <button class="order" onclick="subtract()">&#45;</button>
+        </div>
+        <div class="main4">
+            <p class="total">Total Amount &#61;</p>
+           <p class="amount" id="amount">8000</p>
+        </div>
+        
+        <button class="order">Order</button>
+    </div>    
+    <div class="main3">
+        <p class="cup"> 1 cup &#61; shs 8000 </p>
+    </div>
+    <script>
+        let pointscore = document.getElementById("num")
+        let amountscore = document.getElementById("amount")
+        let amount = 8000
+        let score = 1
+
+
+        function add(){
+            score = score + 1
+            console.log(score);
+            pointscore.innerText = score 
+            amountscore.innerText = amount * score
+        }
+        function subtract(){
+            if(score > 1){
+            score = score - 1
+            console.log(score)
+            pointscore.innerText = score
+            amountscore.innerText = score * amount
+            } 
+        }
+
+       
+        // function add(){
+        //     amount = amount + 8000
+        //     console.log(amount)
+        //     amountscore.innerText = amount
+        // }
+        // function subtract(){
+        //     amount = amount - 8000
+        //     console.log(amount)
+        //     amountscore.innerText = amount
+        // }
+    </script>
+</body>
